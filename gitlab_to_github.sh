@@ -13,7 +13,6 @@ then
 fi
 
 GITLAB_DIR=$(echo ${GITLAB_REPO} | cut -d "/" -f 3)
-echo $GITLAB_DIR
 
 git clone --mirror ${GITLAB_REPO}
 
@@ -21,3 +20,4 @@ cd ${GITLAB_DIR}
 
 git push --no-verify --mirror ${GITHUB_REPO}
 
+rm -rf ${GITLAB_DIR}
