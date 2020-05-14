@@ -20,4 +20,6 @@ cd ${GITLAB_DIR}
 
 git push --no-verify --mirror ${GITHUB_REPO}
 
+cd ..
+
 rm -rf ${GITLAB_DIR}
